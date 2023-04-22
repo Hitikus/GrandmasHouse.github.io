@@ -1,0 +1,1 @@
+-Footer overlaping while height: 100% on .wrapper
