@@ -1,0 +1,714 @@
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+body{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  height: auto;
+}
+.wrapper{
+    background-color: white;
+}
+/*ABOVE HEADER */
+header{
+  transition: all .3s ease 0s;
+}
+.AboveHeader{
+    background-color: #666;
+    width: 100%;
+    height: 2em;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    transition: height 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.AboveHeader a{
+    text-decoration: none;
+    color: #fff;
+}
+.Contact {
+    display: flex;
+    margin: 7px;
+    margin-right: 20px;
+    text-decoration: none;
+    gap: 10px;
+}
+.Socials{
+    display: flex;
+    margin: 7px;
+    margin-left: 20px;
+    text-decoration: none;
+    gap: 15px;
+}
+
+
+/*HEADER*/
+.main-header{
+    width: 100%;
+    background-color: white;
+    height: auto; 
+    position: sticky; 
+    top: 0;
+    z-index: 99999;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: top 0.4s;
+  }
+.logo{
+    width: 3.7em;
+    font-family: "Great Vibes", cursive;
+    font-size: 18px;
+}
+.logo img {
+    max-width: 100%;
+    height: auto;
+}  
+.main-header-inner{
+    display: flex;
+	  align-items: center;
+	  justify-content: space-around;
+	  flex-wrap: wrap;
+    max-width: 100%;
+	  margin: 0;
+}
+.main-nav{
+    font-weight: 400;
+    font-size: 15px;
+}
+.main-nav ul {
+  width: auto;
+	margin: 1em 0 .5em;
+	text-align: center;
+
+}
+.main-nav li {
+	display: inline;
+}
+.main-nav a {
+	display: inline-block;
+	padding: .3em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+.main-nav button{
+    color: black;
+    background-color: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 0.7em 1.7em;
+    border: 1px solid black;
+}
+ .toggle_btn{
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display:none;
+}
+.main-nav-list select{
+    padding: 10px;
+}
+.dropdown_menu{
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 0;
+  
+  overflow: hidden;
+  transition: height 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu.open{
+  height: 10em;
+  margin-top: auto;
+  border-top: 1px solid black;
+}
+.dropdown_menu a{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+.dropdown_menu li{
+  padding: 0.7rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main-nav-list li a:hover{
+  display: inline-block;
+  border-bottom: 2px solid black;
+  opacity: 50%;
+}
+.main-nav-list li .active{
+  display: inline-block;
+  border-bottom: 3px solid black;
+  transition: 0.5s ease;
+}
+
+
+.ContactInfo{
+    background-color: #666;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 2%;
+}
+.Info{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    width: auto;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+}
+.ContactInfo hr{
+    width: 40%;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    z-index: 1;
+    position: absolute;
+    background-color: white;
+    height: 3px;
+}
+.ContactInfo h10{
+    position: relative;
+    background-color: #666;
+    padding-left: 2%;
+    padding-right: 2%;
+    z-index: 2;
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: white;
+}
+
+
+.Content{
+    width: 70%;
+    height: auto;
+    margin: auto;
+    padding-bottom: 5%;
+}
+.content a{
+  color: #009B77;
+
+}
+
+
+
+
+.faq-section {
+    font-family: "Poppins", sans-serif;
+    background-color: #f3f3f3;
+    padding: 60px 0;
+    text-align: center;
+    background-position: bottom right 0%;
+    margin-bottom: 2em;
+   }
+   
+   .faq-section .faq_left_half_circle {
+    position: absolute;
+    left: 80px;
+   }
+   
+   .faq-section .faq_left_half_circle img {
+    position: relative;
+    top: 140px;
+   }
+   
+   .faq-section h3 {
+    text-align: center;
+    padding-bottom: 50px;
+    font-size: 1.875em;
+    margin: 0px;
+   }
+   
+   .faq-section .faq-accordions {
+    max-width: 760px;
+    margin: 0 auto;
+   }
+   
+   .faq-section .faq-accordions .accordion-row {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+   }
+   
+   .faq-section .faq-accordions .accordion-row .title {
+    text-align: left;
+    font-size: 22px;
+    font-weight: 500;
+    position: relative;
+    padding-right: 30px;
+   }
+   
+   .faq-section .faq-accordions .title:after {
+    content: '';
+    position: absolute;
+    border-left:  2px solid;
+    border-bottom:  2px solid;
+    right: 10px;
+    top: 8px;
+    -moz-transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+    width: 10px;
+    height: 10px;
+    z-index: 1;
+    transform: rotate(-45deg);
+   }
+   
+   .faq-section .faq-accordions .title.open:after {
+    transform: rotate(135deg);
+    top: 14px;
+   }
+   
+   .faq-section .faq-accordions .accordion-row .content {
+    text-align: left;
+    font-size: 16px;
+    line-height: 30px;
+    overflow: hidden;
+    height: 0px;
+    transition: 0.5s all;
+   }
+   
+   .faq-section .faq-accordions .accordion-row .open + .content {
+    height: auto;
+    overflow: initial;
+    padding: 20px 0px;
+   }
+
+
+.Ghdivider{
+    width: 60%;
+    height: 10em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.Ghdivider img{
+    max-width: 100%;
+    height: 10em;
+}
+
+
+
+
+
+.ContactForm{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+    width: 100%;
+    margin-top: 2em;
+}
+.ContactDiv{
+    border: 2px solid #e7e7e7;
+    width: 60%;
+    height: auto;
+    padding: 2em;
+}
+.ContactDiv h2{
+    text-align: center;
+    font-size: 2.5em;
+    padding: 0 0.5em 0.3em 0.5em;
+}
+#contactSpan{
+    display: block;
+    font-style: italic;
+    padding: 0 1em 2em 1em;
+    word-wrap: break-word;
+    text-align: center;
+    opacity: 0.8;
+    height: auto;
+}
+.LocationDiv{
+    width: 30%;
+    border-left: 2px solid #e7e7e7;
+    border-top: 2px solid #e7e7e7;
+    height: auto;
+    padding: 0.5em;
+}
+.Address{
+    width: 100%;
+    height: 5em;
+    border-bottom: 1px solid #e7e7e7;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  
+  }
+.AddressBox{
+    border-right: 1px solid #e7e7e7;
+    width: 9em;
+    padding-right: 1em;
+    height: 3em;
+  }
+#SpanAddress{
+    padding: 0 4em 0 4em ;
+    max-width: 100%;
+  }
+.Email{
+    width: 100%;
+    height: 4em;
+    border-bottom: 1px solid #e7e7e7;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  
+  }
+.EmailBox{
+    border-right: 1px solid #e7e7e7;
+    width: 9em;
+    padding-right: 1em;
+    height: 2em;
+  }
+#SpanEmail{
+    padding: 0 4em 0 4em ;
+    max-width: 100%;
+  }
+.MobilePhone{
+    width: 100%;
+    height: 4em;
+    border-bottom: 1px solid #e7e7e7;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  
+  }
+.PhoneBox{
+    border-right: 1px solid #e7e7e7;
+    width: 9em;
+    padding-right: 1em;
+    height: 2em;
+  }
+#SpanPhone{
+    padding: 0 4em 0 4em ;
+  }
+
+
+
+
+
+
+
+
+
+
+  .Map{
+    display: none;
+    width: 100%;
+    margin: 0;
+    bottom: 0;
+    background: #666;
+  }
+ /*FOOTER*/
+ .footer-distributed{
+  background: #666;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+  margin-top: 0;
+
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+/* Footer left */
+.footer-distributed .footer-left{
+  width: 40%;
+}
+/* The company logo */
+.footer-distributed h3{
+  color:  #ffffff;
+  font: normal 36px 'Open Sans', cursive;
+  margin: 0;
+}
+.footer-distributed h3 span{
+  color:  lightseagreen;
+}
+/* Footer links */
+.footer-distributed .footer-links{
+  color:  #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+footer a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 15px 10px;
+  position: relative;
+}
+footer a::after { 
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: block;
+  background: none repeat scroll 0 0 transparent;
+  height: 2px;
+  width: 0;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+footer a:hover::after { 
+  width: 100%; 
+  left: 0; 
+}
+.footer-distributed .footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  font-weight:400;
+  text-decoration: none;
+  color:  inherit;
+}
+.footer-distributed .footer-company-name{
+  color:  #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+/* Footer Center */
+.footer-distributed .footer-center{
+  width: 35%;
+}
+.footer-distributed .footer-center i{
+  background-color:  #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+  /* font-size: 17px; */
+  line-height: 38px;
+}
+.footer-distributed .footer-center p{
+  display: inline-block;
+  color: #ffffff;
+  font-weight:400;
+  vertical-align: middle;
+  margin:0;
+}
+
+.footer-distributed .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size:17px;
+  line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+  color:  lightseagreen;
+  text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+.footer-distributed .footer-right{
+  width: 20%;
+}
+.footer-distributed .footer-company-about{
+  line-height: 20px;
+  color:  #92999f;
+  font-size: 17px;
+  font-weight: normal;
+  margin: 0;
+}
+.footer-distributed .footer-company-about span{
+  display: block;
+  color:  #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+  display: inline-block;
+  width: 55px;
+  height: auto;
+  cursor: pointer;
+  background-color:  #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+@media(max-width:1200px) {
+  .faq-section .faq-accordions .accordion-row .title {
+       font-size: 18px;
+}
+.faq-section{
+  padding: 1.5em;
+}
+.Content{
+  width: 80%;
+}
+
+
+
+   }
+@media (max-width: 960px) {
+
+/*Above Header*/
+.AboveHeader{
+  display: none;
+}
+
+/*MAIN HEADER*/
+.main-header{
+position: sticky;
+height: auto;
+}
+.main-header .container {
+justify-content: flex-start;
+}
+.CoverOverlay1{
+  font-size: 15px;
+  top: 40%;
+}
+.CoverOverlay1 p2{
+  font-size: 10px;
+}
+.main-nav{
+display: none;
+}
+.main-header-inner .logo{
+margin-left: 5%;
+}
+.main-header-inner{
+display: flex;
+justify-content: space-between;
+margin-left: 5px;
+}
+.toggle_btn{
+display: block;
+margin-right: 5%; 
+}
+.dropdown_menu{
+display: block;
+}
+.switch-lang-responsive{
+display: block;
+}
+
+.Info hr{
+  width: 70%;
+  z-index: 2;
+}
+.ContactInfo h10{
+  font-size: 25px;
+}
+
+.Content{
+  width: 90%;
+}
+.faq-section{
+  border-radius: 10px;
+  }
+
+/* GH DIVIDER */
+.Ghdivider{
+  height: 6em;
+  width: 80%;
+}
+.Ghdivider img{
+  height: 6em;
+}
+#SpanAddress, #SpanEmail, #SpanPhone {
+  padding-left: 2em ;
+  word-wrap: break-word;
+}
+#SpanAddress{
+  height: 7em;
+}
+
+.LocationDiv{
+  display: none;
+}
+.ContactDiv{
+  width: 100%;
+}
+
+
+
+
+
+
+.Map{
+  display: block;
+}
+/*FOOTER*/
+.footer-distributed{
+  font: bold 14px sans-serif;
+
+}
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: block;
+  width: 100%;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.footer-distributed .footer-center i{
+  margin-left: 0;
+}
+}

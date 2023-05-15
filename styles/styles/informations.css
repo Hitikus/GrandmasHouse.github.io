@@ -1,0 +1,861 @@
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+body{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  height: 150vh;
+}
+.wrapper{
+    background-color: white;
+}
+/*ABOVE HEADER */
+header{
+  transition: all .3s ease 0s;
+}
+.AboveHeader{
+    background-color: #666;
+    width: 100%;
+    height: 2em;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    transition: height 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.AboveHeader a{
+    text-decoration: none;
+    color: #fff;
+}
+.Contact {
+    display: flex;
+    margin: 7px;
+    margin-right: 20px;
+    text-decoration: none;
+    gap: 10px;
+}
+.Socials{
+    display: flex;
+    margin: 7px;
+    margin-left: 20px;
+    text-decoration: none;
+    gap: 15px;
+}
+
+
+/*HEADER*/
+.main-header{
+    width: 100%;
+    background-color: white;
+    height: auto; 
+    position: sticky; 
+    top: 0;
+    z-index: 99999;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: top 0.4s;
+  }
+.logo{
+    width: 3.7em;
+    font-family: "Great Vibes", cursive;
+    font-size: 18px;
+}
+.logo img {
+    max-width: 100%;
+    height: auto;
+}   
+.main-header-inner{
+    display: flex;
+	  align-items: center;
+	  justify-content: space-around;
+	  flex-wrap: wrap;
+    max-width: 100%;
+	  margin: 0;
+}
+.main-nav{
+    font-weight: 400;
+    font-size: 15px;
+}
+.main-nav ul {
+  width: auto;
+	margin: 1em 0 .5em;
+	text-align: center;
+
+}
+.main-nav li {
+	display: inline;
+}
+.main-nav a {
+	display: inline-block;
+	padding: .3em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+.main-nav button{
+    color: black;
+    background-color: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 0.7em 1.7em;
+    border: 1px solid black;
+}
+ .toggle_btn{
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display:none;
+}
+.main-nav-list select{
+    padding: 10px;
+}
+.dropdown_menu{
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 0;
+  
+  overflow: hidden;
+  transition: height 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu.open{
+  height: 10em;
+  margin-top: auto;
+  border-top: 1px solid black;
+}
+.dropdown_menu a{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+.dropdown_menu li{
+  padding: 0.7rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main-nav-list li a:hover{
+  display: inline-block;
+  border-bottom: 2px solid black;
+  opacity: 50%;
+}
+.main-nav-list li .active{
+  display: inline-block;
+  border-bottom: 3px solid black;
+  transition: 0.5s ease;
+}
+
+
+
+.InfoDiv{
+  background-color: #666;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 2%;
+}
+.Info{
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  width: auto;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+}
+.InfoDiv hr{
+  width: 40%;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+  z-index: 1;
+  position: absolute;
+  background-color: white;
+  height: 3px;
+}
+.InfoDiv h10{
+  position: relative;
+  background-color: #666;
+  padding-left: 2%;
+  padding-right: 2%;
+  z-index: 2;
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: white;
+}
+
+.Content{
+  width: 70%;
+  height: 2000px;
+  margin: auto;
+}
+.Accomodation{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.Bedroom1, .Bedroom2, .Bedroom3, .Bedroom4{
+  width: 13em;
+  height: 8em;
+  border-radius: 12px;
+  border: 1px solid #666;
+}
+.Accomodation i{
+  font-size: 2em;
+  padding: 10px;
+  color: black;
+}
+
+.AboutHouse{
+  padding: 2em;
+  background-color:#f2f2f2;
+  height: 15em;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+}
+.AboutHeader{
+  width: 10%;
+  height: 100%;
+  border-right: 1px solid black;
+  text-align: center;
+  padding: 0.5em;
+}
+.AboutHeader hHeader{
+  font-weight: bold;
+} 
+.Ghdivider{
+  width: 60%;
+  height: 10em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.Ghdivider img{
+  max-width: 100%;
+  height: 10em;
+}
+.RulesDiv{
+  margin: auto;
+  width: 40%;
+  text-align: center;
+}
+.RulesDiv h4{
+  font-weight: 500;
+  font-size: 50px;
+}
+.RulesDiv p{
+  font-style: italic;
+  opacity: 0.8;
+  margin-bottom: 1em;
+}
+
+
+
+.AboutSpan{
+  display: flex;
+  width: 90%;
+  height: 100%;
+  margin-left: 1em;
+  text-align: center;
+  align-items: center;
+}
+.AboutSpan p{
+  font-style: italic;
+  font-size: 1em;
+}
+
+.HouseRules{
+  height: auto;
+  padding: 2em;
+  border: 1px solid #e7e7e7;
+  margin-bottom: 2em;
+}
+.CheckIn{
+  width: 100%;
+  height: 5em;
+  border-bottom: 1px solid #e7e7e7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.CheckOut{
+  width: 100%;
+  height: 5em;
+  border-bottom: 1px solid #e7e7e7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.CheckInBox, .CheckOutBox, .PartyBox, .PetsBox{
+  border-right: 1px solid #e7e7e7;
+  height: 3em;
+  width: 8em;
+  padding-right: 1em;
+}
+.CheckIn span{
+  padding-left: 4em;
+}
+.CheckOut span{
+  padding-left: 4em;
+}
+.Pricing{
+  width: 100%;
+  height: 19em;
+  border-bottom: 1px solid #e7e7e7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+.PricingBox{
+  border-right: 1px solid #e7e7e7;
+  width: 8em;
+  padding-right: 1em;
+  height: 5em;
+}
+.PriceTable{
+  padding: 0 4em 0 4em ;
+}
+/* TABLE STYLING */
+.Pricing table{
+  /* border: 1px solid #e7e7e7; */
+  text-align: center;
+  border-collapse: collapse;
+}
+.Pricing th{
+  height: 2em;
+  width: 5em;
+  font-size: 1.2em;
+}
+.Pricing td{
+  height: 2em;
+
+}
+.Pricing th, td{
+  border-bottom: 1px solid #e7e7e7;
+}
+#Price{
+  color: #009B77;
+  font-weight: 500;
+}
+#LastPrice{
+  border: none;
+}
+
+
+
+
+
+.Cancellation{
+  width: 100%;
+  height: 10em;
+  border-bottom: 1px solid #e7e7e7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+.CancellationBox{
+  border-right: 1px solid #e7e7e7;
+  width: 8em;
+  padding-right: 1em;
+  height: 5em;
+}
+.Cancellation span{
+  padding-left: 4em;
+  padding-right: 4em;
+  word-wrap: break-word;
+  word-break: normal;
+}
+.Refund{
+  width: 100%;
+  height: 9em;
+  border-bottom: 1px solid #e7e7e7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+.RefundBox{
+  border-right: 1px solid #e7e7e7;
+  width: 8em;
+  padding-right: 1em;
+  height: 5em;
+}
+.Refund span{
+  padding-left: 4em;
+  word-wrap: break-word;
+  word-break: normal;
+}
+
+.Party{
+  width: 100%;
+  height: 5em;
+  border-bottom: 1px solid #e7e7e7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.Party span{
+  padding-left: 4em;
+}
+
+.Pets{
+  width: 100%;
+  height: 5em;
+  border-bottom: 1px solid #e7e7e7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.Pets span{
+  padding-left: 4em;
+}
+.Children{
+  width: 100%;
+  height: 7em;
+  border-bottom: 1px solid #e7e7e7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ChildrenBox{
+  border-right: 1px solid #e7e7e7;
+  width: 8em;
+  height: 5em;
+}
+.Children span{
+  padding-left: 4em;
+}
+
+.AccomodationDiv{
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+.AccomodationDiv h4{
+  font-weight: 500;
+  font-size: 50px;
+}
+.AccomodationDiv p{
+  font-style: italic;
+  opacity: 0.8;
+  margin-bottom: 1em;
+}
+
+.BedroomGallery{
+  width: 100%;
+  height: 10em;
+  display: flex;
+  
+  flex-wrap: wrap;
+  margin-top: 1em;
+  gap: 1%;
+}
+.BedroomGallery a{
+  text-decoration: none;
+  color: black;
+}
+.Bedroom1G, .Bedroom2G, .Bedroom3G, .Bedroom4G{
+  width: 24%; 
+  height: 100%;
+  cursor: pointer;
+  transition: all ease 0.3s; 
+}
+.Bedroom1G:hover{
+  transform: scale(3) ;
+}
+.Bedroom2G:hover{
+  transform: scale(3) ;
+}
+.Bedroom3G:hover{
+  transform: scale(3) ;
+}
+.Bedroom4G:hover{
+  transform: scale(3) ;
+}
+.Bedroom1G span {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(255,255,255,.8);
+}
+.Bedroom1G:hover span {
+  display: block
+}
+.Bedroom2G span {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(255,255,255,.8);
+}
+.Bedroom2G:hover span {
+  display: block
+}
+.Bedroom3G span {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(255,255,255,.8);
+}
+.Bedroom3G:hover span {
+  display: block
+}
+.Bedroom4G span {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(255,255,255,.8);
+}
+.Bedroom4G:hover span {
+  display: block
+}
+.AreaInfo{
+  width: 100%;
+  height: 20em;
+  background-color: #f2f2f2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /*FOOTER*/
+ .footer-distributed{
+  background: #666;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+  margin-top: 0;
+
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+/* Footer left */
+.footer-distributed .footer-left{
+  width: 40%;
+}
+/* The company logo */
+.footer-distributed h3{
+  color:  #ffffff;
+  font: normal 36px 'Open Sans', cursive;
+  margin: 0;
+}
+.footer-distributed h3 span{
+  color:  lightseagreen;
+}
+/* Footer links */
+.footer-distributed .footer-links{
+  color:  #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+footer a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 15px 10px;
+  position: relative;
+}
+footer a::after { 
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: block;
+  background: none repeat scroll 0 0 transparent;
+  height: 2px;
+  width: 0;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+footer a:hover::after { 
+  width: 100%; 
+  left: 0; 
+}
+.footer-distributed .footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  font-weight:400;
+  text-decoration: none;
+  color:  inherit;
+}
+.footer-distributed .footer-company-name{
+  color:  #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+/* Footer Center */
+.footer-distributed .footer-center{
+  width: 35%;
+}
+.footer-distributed .footer-center i{
+  background-color:  #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+  /* font-size: 17px; */
+  line-height: 38px;
+}
+.footer-distributed .footer-center p{
+  display: inline-block;
+  color: #ffffff;
+  font-weight:400;
+  vertical-align: middle;
+  margin:0;
+}
+
+.footer-distributed .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size:17px;
+  line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+  color:  lightseagreen;
+  text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+.footer-distributed .footer-right{
+  width: 20%;
+}
+.footer-distributed .footer-company-about{
+  line-height: 20px;
+  color:  #92999f;
+  font-size: 17px;
+  font-weight: normal;
+  margin: 0;
+}
+.footer-distributed .footer-company-about span{
+  display: block;
+  color:  #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+  display: inline-block;
+  width: 55px;
+  height: auto;
+  cursor: pointer;
+  background-color:  #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 960px) {
+/*Above Header*/
+.AboveHeader{
+  display: none;
+}
+/*MAIN HEADER*/
+.main-header{
+position: sticky;
+height: auto;
+}
+.main-header .container {
+justify-content: flex-start;
+}
+.CoverOverlay1{
+    font-size: 15px;
+    top: 40%;
+}
+.CoverOverlay1 p2{
+  font-size: 10px;
+}
+.main-nav{
+display: none;
+}
+.main-header-inner .logo{
+margin-left: 5%;
+}
+.main-header-inner{
+display: flex;
+justify-content: space-between;
+margin-left: 5px;
+}
+.toggle_btn{
+display: block;
+margin-right: 5%; 
+}
+.dropdown_menu{
+display: block;
+}
+.switch-lang-responsive{
+display: block;
+}
+
+/* MAIN CONTENT WRAPPER */
+.Content{
+  width: 90%;
+}
+.AboutHouse{
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  padding: 1em;
+}
+.AboutHeader{
+  width: auto;
+  margin: auto;
+  border-left: 1px solid black;
+  margin-bottom: 1em;
+  font-size: 1.4em;
+}
+
+.RulesDiv{
+  width: 80%;
+}
+.HouseRules{
+  margin: auto;
+ white-space: nowrap;
+  overflow-x: auto;
+  word-break: break-all;
+
+}
+.RefundBox, .ChildrenBox, .PetsBox, .PartyBox, .CheckInBox, .CheckInBox, .CheckOutBox{
+  width: auto;
+}
+.HouseRules span{
+  max-width: 8em;
+  padding-left: 1em;
+}
+.AccomodationDiv{
+  width: 80%;
+  margin: auto;
+}
+.AccomodationDiv h4{
+  font-size: 40px;
+
+}
+.Ghdivider{
+  height: 6em;
+  width: 80%;
+
+}
+.Ghdivider img{
+  height: 6em;
+}
+.Bedroom1, .Bedroom2, .Bedroom3, .Bedroom4{
+  width: 8em;
+  height: 5em;
+}
+
+.Accomodation i{
+  font-size: 1em;
+}
+.Accomodation h2{
+  font-size: 1em;
+}
+.Accomodation span{
+  font-size: 0.875em;
+}
+
+.Bedroom1G, .Bedroom2G, .Bedroom3G, .Bedroom4G{
+  width: 80%;
+  margin: auto;
+}
+.BedroomGallery{
+  height: auto;
+}
+
+
+
+}
+
+
+
