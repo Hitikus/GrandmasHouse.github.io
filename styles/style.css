@@ -45,7 +45,6 @@ header{
 
 
 /*HEADER*/
-/*Onclick cursor kod navbara postavit     pointer-events: none kad je oznacena na tom, kada se pritisne nesto drugo, mijenja se na taj tab tako da on ostaje zakljucan*/
 .main-header{
     width: 100%;
     background-color: white;
@@ -75,7 +74,7 @@ header{
 }
 .main-nav{
     font-weight: 400;
-    font-size: 15px;
+    font-size: 16px;
 }
 .main-nav ul {
   width: auto;
@@ -88,10 +87,10 @@ header{
 }
 .main-nav a {
 	display: inline-block;
-	padding: .3em 1.5em;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: black;
+	padding: .3em 1.2em; /*Bilo je .3em 1.5em*/
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
 }
 .main-nav button{
     color: black;
@@ -113,24 +112,30 @@ header{
 .main-nav-list select{
     padding: 10px;
 }
+
+
+/* DROPDOWN MENU */
 .dropdown_menu{
   position: relative;
   z-index: 10;
-  width: 100%;
+  width: 80%; /*width=100% za border top do kraja*/
+  margin: auto;
   height: 0;
-  
   overflow: hidden;
   transition: height 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .dropdown_menu.open{
-  height: 10em;
+  height: 11em;
   margin-top: auto;
-  border-top: 1px solid black;
+  border-top: 2px solid #e7e7e7 ;
+  font-weight: 600;
 }
 .dropdown_menu a{
   text-decoration: none;
   text-transform: uppercase;
   color: black;
+  opacity: 0.7;
+  padding-bottom: 3px;
 }
 .dropdown_menu li{
   padding: 0.7rem;
@@ -140,6 +145,8 @@ header{
   flex-wrap: wrap;
   justify-content: center;
 }
+
+
 
 .main-nav-list li a:hover{
   display: inline-block;
@@ -273,18 +280,6 @@ li {
 
 
 
-/* .ContactDropdown{
-  display: none;
-  width: 300px;
-  height: 150px;
-  background-color: black;
-  position: absolute;
-  z-index: 2;
-}
-#Contact:hover, .ContactDropdown{
-  display: block;
-  
-} */
 
 
 
@@ -1201,25 +1196,19 @@ display: flex;
 .switch-lang-responsive{
 display: block;
 }
-.dropdown_menu.open{
-padding: 1em;
-}
+
 
 
 
 /*Cover*/
 #cover{
-    height: 20em;
+    height: 23em;
 }
-.swiper-button-next .swiper-button-prev{
-    top: 60%;
-    font-size: 15px;
-    margin-top: 0;
-}
+
 
 /*MAIN*/
 .mainContent{
-  height: 74em; /*1200px=80em*/
+   /*1200px=80em*/
   width: 90%;
   margin: auto;
 }
@@ -1285,10 +1274,11 @@ padding: 1em;
 .InformationsRow hRow{
   font-size: 25px;
   display: block;
-  padding-bottom: 20px;
+  padding: 20px 0 20px 0;
+  font-weight: 600;
 }
 .VranskoJezeroInfo{
-  height: 113em;
+  height: 100em;
   /*background-color: #fae0bf;*/
   background-color: #f2f2f2;
 }
@@ -1305,13 +1295,13 @@ padding: 1em;
 .Row1{
   width: 340px;
   margin: auto;
-  box-shadow: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .Row2{
   width: 340px;
   margin: auto;
-  box-shadow: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .Row2 h11{
   font-size: 1.25em;
@@ -1319,7 +1309,7 @@ padding: 1em;
 .Row3{
   width: 340px;
   margin: auto;
-  box-shadow: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 

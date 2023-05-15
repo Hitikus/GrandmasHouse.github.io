@@ -74,7 +74,7 @@ header{
 }
 .main-nav{
     font-weight: 400;
-    font-size: 15px;
+    font-size: 16px;
 }
 .main-nav ul {
   width: auto;
@@ -87,10 +87,10 @@ header{
 }
 .main-nav a {
 	display: inline-block;
-	padding: .3em 1.5em;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: black;
+	padding: .3em 1.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
 }
 .main-nav button{
     color: black;
@@ -112,24 +112,30 @@ header{
 .main-nav-list select{
     padding: 10px;
 }
+
+
+/* DROPDOWN MENU */
 .dropdown_menu{
   position: relative;
   z-index: 10;
-  width: 100%;
+  width: 80%; /*width=100% za border top do kraja*/
+  margin: auto;
   height: 0;
-  
   overflow: hidden;
   transition: height 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .dropdown_menu.open{
-  height: 10em;
+  height: 11em;
   margin-top: auto;
-  border-top: 1px solid black;
+  border-top: 2px solid #e7e7e7 ;
+  font-weight: 600;
 }
 .dropdown_menu a{
   text-decoration: none;
   text-transform: uppercase;
   color: black;
+  opacity: 0.7;
+  padding-bottom: 3px;
 }
 .dropdown_menu li{
   padding: 0.7rem;
@@ -140,16 +146,8 @@ header{
   justify-content: center;
 }
 
-.main-nav-list li a:hover{
-  display: inline-block;
-  border-bottom: 2px solid black;
-  opacity: 50%;
-}
-.main-nav-list li .active{
-  display: inline-block;
-  border-bottom: 3px solid black;
-  transition: 0.5s ease;
-}
+
+
 
 
 
@@ -192,7 +190,7 @@ header{
 
 .Content{
   width: 70%;
-  height: 2000px;
+  height: auto;
   margin: auto;
 }
 .Accomodation{
@@ -233,6 +231,21 @@ header{
 .AboutHeader hHeader{
   font-weight: bold;
 } 
+.AboutSpan{
+  display: flex;
+  width: 90%;
+  height: 100%;
+  margin-left: 1em;
+  text-align: center;
+  align-items: center;
+  opacity: 0.8;
+}
+.AboutSpan p{
+  font-style: italic;
+  font-size: 1em;
+}
+
+
 .Ghdivider{
   width: 60%;
   height: 10em;
@@ -261,18 +274,7 @@ header{
 
 
 
-.AboutSpan{
-  display: flex;
-  width: 90%;
-  height: 100%;
-  margin-left: 1em;
-  text-align: center;
-  align-items: center;
-}
-.AboutSpan p{
-  font-style: italic;
-  font-size: 1em;
-}
+
 
 .HouseRules{
   height: auto;
@@ -455,9 +457,9 @@ header{
 
 .BedroomGallery{
   width: 100%;
-  height: 10em;
+  height: 12em;
   display: flex;
-  
+  margin-bottom: 2em;
   flex-wrap: wrap;
   margin-top: 1em;
   gap: 1%;
@@ -528,13 +530,46 @@ header{
 .Bedroom4G:hover span {
   display: block
 }
-.AreaInfo{
+#AreaInfo{
   width: 100%;
   height: 20em;
   background-color: #f2f2f2;
 }
 
 
+/* GETTING AROUND */
+.AroundHouse{
+  padding: 2em;
+  background-color:#f2f2f2;
+  height: 20em;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+.AroundHeader{
+  width: 10%;
+  height: 100%;
+  border-right: 1px solid black;
+  text-align: center;
+  padding: 0.5em;
+}
+.AroundHeader hHeader{
+  font-weight: bold;
+} 
+.AroundSpan{
+  display: flex;
+  width: 90%;
+  height: 100%;
+  margin-left: 1em;
+  text-align: center;
+  align-items: center;
+  opacity: 0.8;
+}
+.AroundSpan p{
+  font-style: italic;
+  font-size: 1em;
+}
 
 
 
@@ -778,7 +813,14 @@ display: block;
 .switch-lang-responsive{
 display: block;
 }
-
+.InfoDiv h10{
+  font-size: 20px;
+  font-weight: 400;
+}
+.InfoDiv hr{
+  width: 75%;
+  z-index: 2;
+}
 /* MAIN CONTENT WRAPPER */
 .Content{
   width: 90%;
@@ -852,8 +894,38 @@ display: block;
 .BedroomGallery{
   height: auto;
 }
+/* GETTING AROUND */
+.AroundHouse{
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  padding: 1em;
+}
+.AroundHeader{
+  width: auto;
+  margin: auto;
+  border-left: 1px solid black;
+  margin-bottom: 1em;
+  font-size: 1.4em;
+}
 
 
+/*FOOTER*/
+.footer-distributed{
+  font: bold 14px sans-serif;
+
+}
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: block;
+  width: 100%;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.footer-distributed .footer-center i{
+  margin-left: 0;
+}
 
 }
 
