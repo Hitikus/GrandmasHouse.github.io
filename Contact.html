@@ -65,10 +65,10 @@
     </div>
 
     <div class="dropdown_menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Informations</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Contact</a></li>
+      <li><a href="./GrandmasHouse.html">Home</a></li>
+      <li><a href="./informations.html">Informations</a></li>
+      <li><a href="./gallery.html">Gallery</a></li>
+      <li><a href="./Contact.html">Contact</a></li>
     </div>
     </header>
  <div class="ContactInfo">
@@ -195,5 +195,32 @@
         });
     });
     });</script>
+    <script>
+  //dropdown menu
+const toggleBtn = document.querySelector('.toggle_btn');
+const toggleBtnIcon = document.querySelector('.toggle_btn i');
+const DropDownMenu = document.querySelector('.dropdown_menu');
+
+toggleBtn.onclick = function(){
+    DropDownMenu.classList.toggle('open');
+    const isOpen = DropDownMenu.classList.contains('open')
+    toggleBtnIcon.classList = isOpen
+    ? 'fa-solid fa-xmark'
+    : 'fa-solid fa-bars'
+    
+}
+var btnContainer = document.getElementById("main-nav");
+var buttons = btnContainer.getElementsByClassName("btn");
+
+for(var i=0; i<buttons.length; i++) {
+    buttons[i].addEventListener('click', function () {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active");
+        this.className += " active";
+
+        
+})
+}
+</script>
 </div>
 </body>

@@ -48,9 +48,6 @@
             <li><a class="btn active" href=".MainContent">Informations</a></li>
             <li><a class="btn" href="./gallery.html">Gallery</a></li>
             <li><a class="button" id="Contact" href="./Contact.html">Contact</a></li>
-              <!-- <i class="fa fa-caret-down"></i>
-              <div class="ContactDropdown">
-              </div> -->
           </ul>
         </div>
         <div class="toggle_btn">
@@ -59,10 +56,10 @@
     </div>
 
     <div class="dropdown_menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Informations</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Contact</a></li>
+      <li><a href="./GrandmasHouse.html">Home</a></li>
+      <li><a href="./informations.html">Informations</a></li>
+      <li><a href="./gallery.html">Gallery</a></li>
+      <li><a href="./Contact.html">Contact</a></li>
     </div>
     </header>
     <div class="InfoDiv">
@@ -208,11 +205,27 @@
   </div>
   <div class="Ghdivider"><img src="./Pictures/DividerFacilities.png" alt="Divider" ></div>
 
-<div class="AreaInfo">
-
-
+<!-- <div id="AreaInfo"> -->
+  <div class="AroundHouse">
+    <div class="AroundHeader">
+        <hHeader>Getting around</hHeader>
+    </div>
+    <div class="AroundSpan">
+      <p>Numerous national and nature parks, beaches, islands, restaurants and clubs..
+        popular destination the Garden festival 25 km away.
+        Also Barbarellas discotheque only 15 km from the accommodation.
+        Nearby cities Zadar, Biograd, Šibenik, Vodice, Trogir, Split and others..<br><br>
+        In the vicinity of our accommodation there are numerous national parks and nature parks such as the lookout Kamenjak point from which there is a beautiful view of numerous islands 
+        (Murter, Kornati Islands, Vrgada and many others), and of the Vrana Lake Nature Park, which is also the largest lake in Croatia. For those with a slightly more active spirit, there 
+        is the Paklenica Nature Park, where you are surrounded in nature by the beauty of Velebit. The Kornati National Park also offers many interesting things that are worth visiting and 
+        experiencing, as well as the Telašćica National Park with its famous salt lake. Let's not forget the Krka National Park, which also offers rich flora and fauna and the cultural and 
+        historical sites of Krka. For our youngest, there is also Fun Park Mirkovec, only 13.3 km away. Nearby cities that are worth visiting because of their old city center and many other 
+        cultural sights are Zadar, Biograd, Šibenik, Vodice, Trogir, Split and others. The beaches are only 15 km away and there is the popular barbarellas club, and the garden festival is a
+         little further away.</p>
+    </div>
+  </div>
   
-</div>
+<!-- </div> -->
 
 
 
@@ -225,7 +238,7 @@
 
 
 
-<!-- <footer class="footer-distributed">
+ <footer class="footer-distributed">
   <div class="footer-left">
     <h3>Grandma's<span> House</span></h3>
     <p class="footer-links">
@@ -262,6 +275,35 @@
       <a href="https://www.instagram.com/grandmashouse2021/?hl=hr" target="_blank"><i class="fa fa-instagram"></i></a>
     </div>
   </div>
-</footer> -->
+</footer>
+
+
+<script>
+  //dropdown menu
+const toggleBtn = document.querySelector('.toggle_btn');
+const toggleBtnIcon = document.querySelector('.toggle_btn i');
+const DropDownMenu = document.querySelector('.dropdown_menu');
+
+toggleBtn.onclick = function(){
+    DropDownMenu.classList.toggle('open');
+    const isOpen = DropDownMenu.classList.contains('open')
+    toggleBtnIcon.classList = isOpen
+    ? 'fa-solid fa-xmark'
+    : 'fa-solid fa-bars'
+    
+}
+var btnContainer = document.getElementById("main-nav");
+var buttons = btnContainer.getElementsByClassName("btn");
+
+for(var i=0; i<buttons.length; i++) {
+    buttons[i].addEventListener('click', function () {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active");
+        this.className += " active";
+
+        
+})
+}
+</script>
 </div>
 </body>
