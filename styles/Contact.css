@@ -622,36 +622,36 @@ footer a:hover::after {
 
 /*MAIN HEADER*/
 .main-header{
-position: sticky;
-height: auto;
+  position: sticky;
+  height: auto;
 }
 .main-header .container {
-justify-content: flex-start;
+  justify-content: flex-start;
 }
 .CoverOverlay1{
-  font-size: 15px;
-  top: 40%;
+      font-size: 15px;
+      top: 40%;
 }
 .CoverOverlay1 p2{
-  font-size: 10px;
+    font-size: 10px;
 }
 .main-nav{
-display: none;
+  display: none;
 }
 .main-header-inner .logo{
-margin-left: 5%;
+  margin-left: 5%;
 }
 .main-header-inner{
 display: flex;
-justify-content: space-between;
-margin-left: 5px;
+  justify-content: space-between;
+  margin-left: 5px;
 }
 .toggle_btn{
-display: block;
-margin-right: 5%; 
+  display: block;
+  margin-right: 5%; 
 }
 .dropdown_menu{
-display: block;
+  display: block;
 }
 .switch-lang-responsive{
 display: block;
@@ -666,7 +666,7 @@ display: block;
 }
 
 .Content{
-  width: 90%;
+  width: 85%;
 }
 .faq-section{
   border-radius: 10px;
