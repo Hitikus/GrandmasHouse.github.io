@@ -2,14 +2,14 @@
 
 
 
-function myFunction() {
+/*function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "main-header-inner") {
       x.className += " responsive";
     } else {
       x.className = "main-header-inner";
     }
-}
+}*/
 
 
 //dropdown menu
@@ -19,10 +19,12 @@ const DropDownMenu = document.querySelector('.dropdown_menu');
 
 toggleBtn.onclick = function(){
     DropDownMenu.classList.toggle('open');
-
- 
+    const isOpen = DropDownMenu.classList.contains('open')
+    toggleBtnIcon.classList = isOpen
+    ? 'fa-solid fa-xmark'
+    : 'fa-solid fa-bars'
+    
 }
-
 var btnContainer = document.getElementById("main-nav");
 var buttons = btnContainer.getElementsByClassName("btn");
 
@@ -32,8 +34,17 @@ for(var i=0; i<buttons.length; i++) {
         current[0].className = current[0].className.replace(" active");
         this.className += " active";
 
+        
 })
 }
+//Ugasi dropdown menu, ali ga ne resetira
+/*$(document).ready(function(){
+    $(window).scroll(function(){
+        if($(this).scrollTop()>50){
+           $(DropDownMenu).removeClass('open');
+    }
+    });
+});*/
 
 
 
@@ -70,5 +81,9 @@ $(document).ready(function(){
   });
 
 });
+
+
+
+
 
 
