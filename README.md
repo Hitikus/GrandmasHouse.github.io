@@ -4,7 +4,8 @@ Welcome to the official website for **Grandma's House**, a cozy and luxurious Da
 
 ## 🌐 Live Website
 
-> [https://Hitikus.github.io/GrandmasHouse.github.io](https://Hitikus.github.io/GrandmasHouse.github.io)  
+> [https://Hitikus.github.io/GrandmasHouse.github.io](https://Hitikus.github.io/GrandmasHouse.github.io)
+> I had to change my root html name to index.html for github and home button doesn't work on preview 
 
 ## 📸 Website Overview
 
